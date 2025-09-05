@@ -1,0 +1,320 @@
+/* Reset browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure root elements take full width & height */
+html, body, #root {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    background: #0d0d0d;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between; /* left group vs right group */
+    align-items: center;
+}
+
+
+.nav-list {
+    display: flex;
+    justify-content: space-between; /* space between left & right */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;   /* remove underline */
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;             /* white text */
+    font-weight: 500;         /* semi-bold */
+    padding: 8px 16px;        /* button-like spacing */
+    border-radius: 5px;       /* rounded corners */
+    transition: background-color 0.3s ease; /* smooth hover */
+    display: inline-block;    /* makes padding apply properly */
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif; /* Stylish modern font */
+    font-size: 28px;        /* Bigger text */
+    font-weight: 800;       /* Extra bold */
+    color: #0d6efd;         /* Bootstrap blue */
+    text-transform: uppercase; /* All caps */
+    letter-spacing: 2px;    /* Space between letters */
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin-right: auto;
+    /* Gradient background */
+    color: white;           /* White text */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+.nav-icon-link {
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+.nav-icon {
+    color: rgb(246, 240, 240);
+    font-size: 22px;
+}
+.nav-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: auto;
+    margin-right:-250px; /* This will push the icons to the right */
+    /* Remove margin-right: auto; and margin-left: -350px; */
+}
+.navbar .nav-list.nav-right{
+    justify-content: space-between;
+
+}
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left:auto;
+
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f7f4f4;
+}
+
+.logout-btn:hover {
+    color: red;
+}
+
+/* 📋 Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.85); /* White with transparency */
+    padding: 18px 15px; /* 🔹 Reduced padding vertically and horizontally */
+    border-radius: 12px;
+    max-width: 300px; /* 🔹 Smaller width */
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✨ Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 10px; /* 🔹 Reduced bottom margin */
+}
+
+.form-header h2 {
+    color: #0a1a2f;
+    margin-bottom: 4px; /* 🔹 Reduced spacing */
+    font-weight: 700;
+    font-size: 28px; /* 🔹 Smaller font */
+    font-family: 'Playfair Display', serif;
+}
+
+.form-subtitle {
+    color: #555;
+    font-size: 12px; /* 🔹 Smaller subtitle font */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔤 Inputs */
+.form-group {
+    margin-bottom: 10px; /* 🔹 Reduced vertical spacing */
+    width: 100%;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* 🔹 Slightly smaller radius */
+    padding: 6px 10px; /* 🔹 Reduced vertical padding */
+    transition: all 0.3s ease;
+}
+
+.input-with-icon:focus-within {
+    border-color: #0a1a2f;
+    box-shadow: 0px 0px 8px rgba(10, 26, 47, 0.25);
+}
+
+.input-icon {
+    font-size: 18px; /* 🔹 Slightly smaller icon */
+    margin-right: 8px; /* 🔹 Smaller spacing */
+    color: #555;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    color: #111;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 8px 6px 28px; /* 🔹 Reduced padding */
+}
+
+/* Placeholder */
+.form-input::placeholder {
+    color: #888;
+    font-size: 13px; /* 🔹 Smaller placeholder */
+    font-style: italic;
+}
+
+/* 📂 File Upload */
+.file-input {
+    display: none;
+}
+
+.file-upload-label {
+    display: block;
+    padding: 8px; /* 🔹 Reduced height */
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.file-upload-label:hover {
+    border-color: #0a1a2f;
+    background: #f0f4fa;
+}
+
+.file-upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* 🔹 Reduced gap */
+    color: #666;
+}
+
+.file-upload-content .material-icons {
+    font-size: 22px; /* 🔹 Smaller icon */
+    color: #0a1a2f;
+}
+
+.file-upload-text {
+    font-size: 12px; /* 🔹 Smaller font */
+}
+
+/* ✅ Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 8px; /* 🔹 Reduced button height */
+    background: linear-gradient(135deg, #2a3d66, #1a1c20);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #1a1c20, #2a3d66);
+    transform: scale(1.02);
+}
+
+.submit-button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+/* 🔄 Loading Spinner */
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== Background Video Styling ===== */
+.background-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Page Footer */
+.page-footer {
+    background: #0a1a2f;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    border-top: 1px solid rgba(192, 192, 192, 0.3);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+    margin: 0;
+}
+
+/* Main layout full width */
+.main-layout {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
